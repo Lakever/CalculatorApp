@@ -1,0 +1,25 @@
+@startuml
+set namespaceSeparator ::
+
+class "untitled::main.dart::MyApp" {
+  +Widget build()
+}
+
+"flutter::src::widgets::framework.dart::StatelessWidget" <|-- "untitled::main.dart::MyApp"
+
+class "untitled::wigets::wiget.dart::CalculatorApp" {
+  +State<CalculatorApp> createState()
+}
+
+"flutter::src::widgets::framework.dart::StatefulWidget" <|-- "untitled::wigets::wiget.dart::CalculatorApp"
+
+class "untitled::wigets::wiget.dart::_CalculatorAppState" {
+  +dynamic onButtonClick()
+  +Widget build()
+  +Widget button()
+}
+
+"flutter::src::widgets::framework.dart::State" <|-- "untitled::wigets::wiget.dart::_CalculatorAppState"
+
+
+@enduml
